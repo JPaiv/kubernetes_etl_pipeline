@@ -2,13 +2,17 @@
 # -*- coding: utf-8 -*-
 #pylint: disable=import-error, no-name-in-module
 
-from nightcrawlers.france.basic_data.fr_mappings import \
-    employees, \
-    etablissement_status, \
+from main.mappings import (
+    employees,
+    etablissement_status,
     address_types
+)
+
+from main.helpers import remove_empty_values 
 
 
-def fr_establishment_post_process(prospect_data):
+def etablissement_post_process(prospect_data):
+    prospect_data = remove_empty_values(prospect_data)
     prospect_data = office_address(prospect_data)
     prospect_data = office_name(prospect_data)
     prospect_data = staff_number(prospect_data)
@@ -17,12 +21,6 @@ def fr_establishment_post_process(prospect_data):
     prospect_data = office_number(prospect_data)
     prospect_data = business_id(prospect_data)
     prospect_data = delete_uncombined_values(prospect_data)
-
-    prospect_data = {k: v for k, v in prospect_data.items() if v != ''}
-
-    prospect_data['country'] = 'FR'
-    prospect_data['target'] = 'prospect'
-    prospect_data['source'] = 'fr_etablissement'
 
     return prospect_data
 
