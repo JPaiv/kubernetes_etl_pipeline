@@ -1,6 +1,5 @@
 #!/usr/bin/env
 # -*- coding: utf-8 -*-
-#import pdb; pdb.set_trace()
 
 
 def determine_industry_code_and_headquarters_office(prospect_data):
@@ -125,7 +124,6 @@ def prospect_office(prospect_data):
     if 'prospect_addresses' not in prospect_data:
         prospect_data['prospect_addresses'] = []
     prospect_data['prospect_addresses'].append(office)
-
     prospect_data = delete_used_values(prospect_data)
 
     return prospect_data
