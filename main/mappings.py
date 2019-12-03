@@ -2,21 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-STATIC_DICTS = {
-
-    'fr_etablissement': {
-    'country': 'FR',
-    'source': 'sirene_etablissement_data',
-    'target': 'prospect'
-    },
-
-    'fr_legale': {
-        'country': 'FR',
-        'source': 'sirene_legale_data',
-        'target': 'prospect'
-    }
-}
-
 mappings = {
     'fr_etablissement': {
     'siret': 'office_number',
