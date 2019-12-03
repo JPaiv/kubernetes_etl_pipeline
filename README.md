@@ -47,13 +47,13 @@ The etablissement parser takes the main head office from the industry code and u
 
 Code is set to run in kubernetes at the following dates:
 
-fr_etablissement:
+etablissement:
 6th day of every month at 00:30
 
 Cronjob name and file location:
 kubernetes/cronjobs/france-download-establishment.yaml
 
-fr_legale:
+legale:
 7th day of every month at 00:30
 
 Cronjob name and file location:
