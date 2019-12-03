@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-#pylint: disable=import-error, no-name-in-module
 from nightcrawlers.utils.s3.s3_tools import download_basic_data_from_s3
 #import pdb; pdb.set_trace()
 
@@ -33,7 +32,7 @@ def create_dataframe_from_chunked_csv(source, download_index, sep=',', encoding=
     return dataframe
 
 
-def create_dataframe(source, download_index, sep=';', encoding='utf-8'):
+def create_dataframe(download_index, source, sep=';', encoding='utf-8'):
     """
         Create pandas dataframe with preset values from s3 downloaded CSV file.
     """
