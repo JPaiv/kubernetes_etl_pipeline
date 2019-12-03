@@ -2,11 +2,8 @@ import tempfile
 import pandas as pd
 import logging
 import time
-#pylint: disable=import-error, no-name-in-module
-from nightcrawlers.utils.s3.s3_tools import upload_basic_data_to_s3
-from nightcrawlers.utils.kubejob import create_kube_job
-#import pdb; pdb.set_trace()
-
+from utils.s3.s3_tools import upload_basic_data_to_s3
+from utils.kubejob import create_kube_job
 
 TEMP_DIR = tempfile.mkdtemp()
 logging.getLogger().setLevel("INFO")
