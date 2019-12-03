@@ -32,15 +32,8 @@ python3 -m main.basic_data legale
 
 ### The scripts do the following:
 
-1) Download and unzip the source file(fr_basic_data)
+1) Download and unzip the source file to s3
 
-2) Chunk the data file and start kubejobs for each chunk(fr_basic_data) with imported helper function
+2) Chunk the source data file into smaller 1 million row chunks and start kubejobs for each chunk
 
-3) Kubejob will parse the data with one of the parsers(establishment_parse or legale_parse) depending on the source
-
-
-### France main company headquarters
-
-In France the files contain information in a very peculiar way. This is why we don't receive address information with the legal data file(flegale). This is why company address must be parsed from another file(fetablissement")
-
-The etablissement parser takes the main head office from the industry code and uses the head office information the parse the headquarters office address and other information to prospect.
+3) Kubejob will parse the chunked data 
