@@ -1,4 +1,3 @@
-#pylint: disable=import-error, no-name-in-module
 import dask.dataframe as ddf
 
 
@@ -8,7 +7,7 @@ def iterate_dataframe(dataframe, parse):
     """
 
     df_dask = pandas_to_dask_dataframe(dataframe)
-    return df_dask.apply(lambda x: parse(x), axis=1, meta=('str')).compute(scheduler='multiprocessing')#pylint: disable=unnecessary-lambda
+    return df_dask.apply(lambda x: parse(x), axis=1, meta=('str')).compute(scheduler='multiprocessing')
 
 
 def pandas_to_dask_dataframe(dataframe):
