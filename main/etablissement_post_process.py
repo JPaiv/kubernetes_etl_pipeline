@@ -1,6 +1,5 @@
 #!/usr/bin/env
 # -*- coding: utf-8 -*-
-#pylint: disable=import-error, no-name-in-module
 
 from main.mappings import (
     employees,
