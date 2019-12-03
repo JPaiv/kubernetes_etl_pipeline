@@ -1,23 +1,20 @@
 #!/usr/bin/env
 # -*- coding: utf-8 -*-
-#pylint: disable=import-error, no-name-in-module
 
-from nightcrawlers.france.basic_data.fr_mappings import \
-    employees, \
+
+from nightcrawlers.france.basic_data.fr_mappings import (
+    employees,
     legale_status
+    )
 
 
-def post_process_fr_legale(prospect_data):
+def post_process_legale(prospect_data):
     prospect_data = create_business_id(prospect_data)
     prospect_data = status(prospect_data)
     prospect_data = combine_company_names(prospect_data)
     prospect_data = staff_number(prospect_data)
     prospect_data = industry_code(prospect_data)
     prospect_data = delete_obsolete_values(prospect_data)
-
-    prospect_data['country'] = 'FR'
-    prospect_data['target'] = 'prospect'
-    prospect_data['source'] = 'fr_legale_data'
 
     return prospect_data
 
