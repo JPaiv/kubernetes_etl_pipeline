@@ -4,6 +4,11 @@
 This folder contains the ready code scripts for s3. These tools allows the programme to upload, download and remove data from WS S3.
 
 
+### WARNING!
+
+This script does not contain any AWS keys so the code does not work. If you wish the use the code you must have your own kubernetes and AWS.
+
+
 ### AWS S3 explained
 
 AWS S3 is an object storage.
