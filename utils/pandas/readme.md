@@ -1,9 +1,7 @@
 
 ### Pandas tools
 
-These utility tools contain functions to create dataframe, parse dataframe, map dataframe iteration row, chunk dataframe to smaller pieces and start kubejob for each row.
-
-Mostly these utilities are used for basic prospect data in Nightcrawlers.
+These utility tools contain functions to create dataframe, parse dataframe, map dataframe iteration row, chunk dataframe to smaller pieces and start kubejob for each dataframe row.
 
 
 ### Dataframe chunkers
