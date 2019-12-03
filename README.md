@@ -1,6 +1,6 @@
 
 
-### This folder contains the scripts for French basic data
+### This folder contains the scripts for French business data
 
 Basic data comes from a single source which is INSEE. INSEE is the French official research agency and they offer us an access to over 28 million prospects. Most of the prospects are not active and many prospects are not businesses.
 
